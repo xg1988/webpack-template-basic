@@ -18,7 +18,8 @@ module.exports = {
     },
 
     module:{
-        rules:[{
+        rules:[
+        {
             test:/\.s?css$/,// .css로 끝나는 것을 찾는다.
             use:[
                 'style-loader',//먼저 해석됨
@@ -33,7 +34,6 @@ module.exports = {
                 'babel-loader'
             ]
         }
-    
     ]
     },
 

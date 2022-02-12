@@ -1,0 +1,56 @@
+npm project 시작
+npm init -y
+
+webpack 설치 -D개발의존성
+npm i -D webpack webpack-cli webpack-dev-server@next
+
+package.json 수정
+"scripts": {
+    "dev" : "webpack-dev-server --mode development"
+    , "build" : "webpack --mode production"
+  },
+
+reset.css란
+웹 브라우저마다 각기 다른 default 스타일이 지정되어 있어
+, 이를 초기화함으로써 다양한 웹브라우저에서도 동일한 스타일이 적용되도록 하는 설정
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
+webpack.config.js 생성
+
+
+npm run build 통해서 빌드 실행
+
+https://webpack.js.org/
+
+
+npm i -D html-webpack-plugin
+ npm i -D copy-webpack-plugin
+
+=> copy-webpack-plugin 호환이 되지 않아 재설치 인터넷 검색해보니
+Your node version is lower than 12.20，Please select one of the schemes
+ 2.Reduce the version of copy-webpack-plugin
+npm install copy-webpack-plugin@9 -D
+
+"copy-webpack-plugin": "^9.1.0",
+    "html-webpack-plugin": "^5.5.0",
+
+
+
+css를 해석하는 용도
+npm i -D css-loader style-loader
+
+test:/\.css$/,// .css로 끝나는 것을 찾는다. 
+정규식 제대로 쓰기
+/\.s?css$/
+
+npm i -D sass-loader sass
+
+공급업체 접두사 autoprefixer
+npm i -D postcss autoprefixer postcss-loader
+
+바벨(복붙 404)
+npm i -D @babel/core @bable/preset-env @babel/plugin-transform-runtime
+npm i -D babel-loader
+
+netlify 배포
+
